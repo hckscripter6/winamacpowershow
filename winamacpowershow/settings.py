@@ -25,7 +25,7 @@ SECRET_KEY = '4b8(-y^oavl2#wlp+c3!pcfqu$&9r+=kt+sh$nnfpmvrj9^%_*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'winamacpowershow.herokuapp.com']
 
 
 # Application definition

@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['localhost', 'winamacpowershow.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'winamacpowershows',
+    'winamacpowershow',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['localhost', 'winamacpowershow.herokuapp.com']
 
 INSTALLED_APPS = [
     'winamacpowershow',
+    'info',
     'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -118,7 +119,7 @@ USE_TZ = True
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-        'height': 300,
+        'height': 400,
         'width': '100%',
     },
 }

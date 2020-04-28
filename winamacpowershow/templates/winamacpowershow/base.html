@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="{% url 'homepage' %}">Home</a>
           </li>
           <li class="nav-item">
               <li class="nav-item dropdown">
@@ -36,8 +36,8 @@
                   Events
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Summer Show</a>
-                  <a class="dropdown-item" href="#">Toy Show</a>
+                  <a class="dropdown-item" href="{% url 'summer-show' %}">Summer Show</a>
+                  <a class="dropdown-item" href="{% url 'toy-show' %}">Toy Show</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -47,10 +47,10 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">For Exhibitors</a>
                   <a class="dropdown-item" href="#">For Vendors</a>
-                  <a class="dropdown-item" href="#">Club Info</a>
-                  <a class="dropdown-item" href="#">Direction</a>
-                  <a class="dropdown-item" href="#">Golf Cart Policy</a>
-                  <a class="dropdown-item" href="#">Scholarship</a>
+                  <a class="dropdown-item" href="{% url 'club-info' %}">Club Info</a>
+                  <a class="dropdown-item" href="{% url 'directions' %}">Direction</a>
+                  <a class="dropdown-item" href="{% url 'golf-cart' %}">Golf Cart Policy</a>
+                  <a class="dropdown-item" href="{% url 'scholarship' %}">Scholarship</a>
                 </div>
               </li>
 
@@ -58,7 +58,7 @@
             <a class="nav-link" href="#">Photos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
           </li>
         </ul>
       </div>

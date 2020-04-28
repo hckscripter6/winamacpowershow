@@ -1,0 +1,10 @@
+{% extends 'winamacpowershow/base.html' %}
+
+{% block title %}
+Scholarship | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+<h2>{{ info }}</h2>
+{{ info.content | safe }}
+{% endblock content %}

@@ -12,3 +12,5 @@ class Info(models.Model):
     
     class Meta:
         verbose_name_plural = "Info"
+        
+        

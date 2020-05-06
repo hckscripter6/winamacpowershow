@@ -48,3 +48,9 @@
     width: auto;
 }
 
+div.photos img {
+    height: 175px; 
+    width: auto;
+    margin-bottom: .25em;
+    border: 1px solid black;
+}

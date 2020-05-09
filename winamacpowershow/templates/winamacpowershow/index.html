@@ -1,16 +1,27 @@
 {% extends "winamacpowershow/base.html" %}
 {% load static %}
+
 {% block jumbotron %}
+
 <div class="jumbotron">
   <img src="{% static 'winamacpowershow/POP.png' %}">
 </div>
+
+<div class="ribbon">
+    <a href="{% url 'summer-show' %}">
+        <h3>2020 Summer Show Dates July 16th, 17th, 18th, 19th</h3>
+    </a>
+</div>
+
 {% endblock jumbotron %}
 
 {% block content %}
     <div class="tractor-brand">
-        <h2>Featuring Minneapolis Moline</h2>
-        <img src="{% static 'winamacpowershow/moline.jpg' %}">
+            <h2>Featuring Minneapolis Moline</h2>
+            <img src="{% static 'winamacpowershow/moline.jpg' %}">
     </div>
+
+    <hr>
     <div class="philosophy">
         <h2>Philosophy of the Northern Indiana Power from the Past, Inc.</h2>
         <p>The functional purpose of this corporation is to preserve, rejuvenate, and display antique farm machinery and any other form of machinery utilized in the growth of the U.S.A. Futher, it is the intention of the corporation to foster and perpetuate in the minds of all Americans respect, interest, and recognition of the vital role that different forms of machinery, no matter what their power source, have played in the development of our society as a whole.</p>

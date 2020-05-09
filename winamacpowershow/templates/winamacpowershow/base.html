@@ -21,7 +21,8 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+      
+      <img src="{% static 'winamacpowershow/POP.png' %}">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,30 +31,45 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'homepage' %}">Home</a>
           </li>
-          <li class="nav-item">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Events
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{% url 'summer-show' %}">Summer Show</a>
-                  <a class="dropdown-item" href="{% url 'toy-show' %}">Toy Show</a>
-                </div>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Information
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">For Exhibitors</a>
-                  <a class="dropdown-item" href="#">For Vendors</a>
-                  <a class="dropdown-item" href="{% url 'club-info' %}">Club Info</a>
-                  <a class="dropdown-item" href="{% url 'directions' %}">Direction</a>
-                  <a class="dropdown-item" href="{% url 'golf-cart' %}">Golf Cart Policy</a>
-                  <a class="dropdown-item" href="{% url 'scholarship' %}">Scholarship</a>
-                </div>
-              </li>
-
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Events
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'summer-show' %}">Summer Show</a>
+              <a class="dropdown-item" href="{% url 'toy-show' %}">Toy Show</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Visitors
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'club-info' %}">Club Info</a>
+              <a class="dropdown-item" href="{% url 'directions' %}">Direction</a>
+              <a class="dropdown-item" href="{% url 'golf-cart' %}">Golf Cart Policy</a>
+              <a class="dropdown-item" href="{% url 'scholarship' %}">Scholarship</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Exhibitors
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'exhibitor-info' %}">Exhibitor Information</a>
+              <a class="dropdown-item" href="{% url 'exhibitor-camping' %}">Exhibitor Camping</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Vendors
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'flea-market' %}">Flea Market</a>
+              <a class="dropdown-item" href="{% url 'food-vendor' %}">Food Vendor</a>
+              <a class="dropdown-item" href="{% url 'toy-vendor' %}">Toy Show</a>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'photos' %}">Photos</a>
           </li>
@@ -74,24 +90,25 @@
     </div>
 
     <!-- Optional JavaScript -->
-    <script>
-        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
-          if (!$(this).next().hasClass('show')) {
-            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-          }
-          var $subMenu = $(this).next(".dropdown-menu");
-          $subMenu.toggleClass('show');
-
-
-          $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
-            $('.dropdown-submenu .show').removeClass("show");
-          });
-
-
-          return false;
-        });  
-      
-    </script>
+		<script>
+		$(document).ready(function(){
+		  $('.dropdown-submenu a.test1').on("click", function(e){
+			$('.dropdown-submenu a.test2').next('ul').hide();
+			$(this).next('ul').toggle();
+			e.stopPropagation();
+			e.preventDefault();
+		  });
+		  
+		  $('.dropdown-submenu a.test2').on("click", function(e){
+			$('.dropdown-submenu a.test1').next('ul').hide();
+			$(this).next('ul').toggle();
+			e.stopPropagation();
+			e.preventDefault();
+		  });
+			
+		});
+		
+		</script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

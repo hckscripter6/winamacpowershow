@@ -1,21 +1,26 @@
-
-
-.dropdown-submenu {
-  position: relative;
+nav {
+    padding: 0 15px !important;
+    
 }
 
-.dropdown-submenu a::after {
-  transform: rotate(-90deg);
-  position: absolute;
-  right: 6px;
-  top: .8em;
+nav img {
+    height: 60px;
+    width: auto;
+    background-color: white;
+    margin: 0 !important;
+    padding: 0;
 }
 
-.dropdown-submenu .dropdown-menu {
-  top: 0;
-  left: 100%;
-  margin-left: .1rem;
-  margin-right: .1rem;
+nav ul.navbar-nav li {
+    padding-left: 1em;
+}
+
+.btn a {
+    color: white;
+}
+
+.dropdown-menu {
+    display: none;
 }
 
 .jumbotron {
@@ -42,7 +47,7 @@
 
 .tractor-brand img {
     display: block;
-    margin: 0 auto;
+    margin: 1em auto;
     border: 1px solid grey;
     height: 400px;
     width: auto;
@@ -53,4 +58,167 @@ div.photos img {
     width: auto;
     margin-bottom: .25em;
     border: 1px solid black;
+}
+
+.ribbon { 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-align: center;
+    padding: .75em 0;
+    background-color: grey;
+    
+}
+
+.ribbon a {
+    color: black;
+}
+
+/** Summer Show **/
+
+img.event-image {
+    height: 275px;
+    margin-top: 2em;
+}
+
+.summer-map img {
+    width: 600px;
+}
+
+.summer-head {
+    text-align: center
+}
+
+.summer-head .info2 {
+    margin-top: 1em;
+}
+
+.summer-head .info1 img {
+    border: 1px solid black;
+    height: 275px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 3em;
+}
+
+.summer-head h4:first-of-type,
+.summer-head .upcoming {
+    display: inline;
+}
+
+.summer-head .upcoming {
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+}
+
+/** Toy Show **/
+.toy-show-head {
+    text-align: center;
+}
+
+
+.toy-show-head img {
+    margin: 3em auto 0 auto;
+    border: 1px solid black;
+    height: 225px;
+}
+
+.image-row-1 {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 2em 0;
+}
+
+.image-row-1 img {
+    height: 200px;
+    display: block;
+    margin: 0 auto; 
+    border: 1px solid black;
+}
+
+.toy-ad h1 {
+    text-align: center;
+}
+
+
+div.games p:first-of-type {
+    margin-left: 15px;
+}
+
+/**Directions**/
+.directions {
+    text-align: center;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
+
+.around h2,
+.around h4 {
+    display: block;
+}
+
+.contact-info,
+.club-info {
+    text-align: center;
+}
+
+.club-info .col-sm-2,
+.club-info table {
+    margin: 0 auto;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .image-row-1 img {
+        margin-bottom: 1em;   
+    }
+    
+    .image-row-1 {
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .tractor-brand img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .summer-map img {
+        width: 100%;
+    }
+    
+
+}
+
+@media screen and (max-width: 600px) {
+    .philosophy h2 {
+        font-size: 28px;
+    }
+    
+        .ribbon h3 {
+        font-size: 1.35em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .tractor-brand h2 ,
+    .philosophy h2 {
+        font-size: 25px;
+    }
+    
+    .philosophy p {
+        font-size: .95em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    
 }

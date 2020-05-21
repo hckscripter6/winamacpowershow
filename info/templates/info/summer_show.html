@@ -47,7 +47,7 @@ Summer Show | {{ block.super }}
 					
 					<h4 style="margin-top: 10px;"><strong>July 16th, 17th, 18th, 19th 2020</strong></h4>
 					<h3>At the Winamac Town Park</h3>
-					<a href="#"><h4 class="bold">10 City Park Drive<br>
+					<a href="#summer-directions"><h4 class="bold">10 City Park Drive<br>
 						Winamac IN, 46996</h4></a>
 					<h5>Daily Adult Admission: $3.00</h5>
 					<h5>4 Day Pass: $9.00</h5>
@@ -155,15 +155,23 @@ Summer Show | {{ block.super }}
 
 
 	<div class="summer-show-info">
+        <div class="summer-map">
+			<h1>Summer Show Map</h1>
+			<img src="https://winamac.s3.us-east-2.amazonaws.com/Tractor+Show/summer-map.png">
+		</div>
+        
 		<h1>{{ info.name }}</h1>
 		<div class="body">
 		   {{ info.content | safe }}
 		</div>
 		
-		<div class="summer-map">
-			<h1>Summer Show Map</h1>
-			<img src="https://winamac.s3.us-east-2.amazonaws.com/Tractor+Show/summer-map.png">
-		</div>
+        <div id="summer-directions">
+            <h2><strong>Directions</strong></h2>
+            <h4>10 City Park Drive<br> Winamac, IN 46996</h4>
+
+            <iframe class="map" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=10%20City%20Par%20Drive%20Winamac%2C%20IN%2046996&key=AIzaSyCZfrvKZEGslRl7CkrXd7be7DVXLWBgVQU" allowfullscreen></iframe> 
+        </div>
+
 	</div>
 
 {% endblock content %}

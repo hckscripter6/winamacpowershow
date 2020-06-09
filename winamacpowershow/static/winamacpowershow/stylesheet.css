@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 nav {
     padding: 0 15px !important;
     
@@ -18,21 +22,35 @@ nav ul.navbar-nav li {
     color: white;
 }
 
+p {
+    font-size: 18px;
+}
+
+h1 {
+    font-family: 'Fjalla One', sans-serif;
+}
+
 .dropdown-menu {
     display: none;
 }
 
 .jumbotron {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid black;
     margin-bottom: 0;
+    background-image: url('tractor-show.jpg');
+    height: 22.5em;
+	background-size: 97em 35em;
+	background-repeat: no-repeat;
+    border-radius: 0;
 }
 
 .jumbotron img {
     display: block;
-    margin: 0 auto;
-    height: 150px;
+    margin: 2em auto 0 auto;
+    height: 175px;
     width: auto;
-    border: 1px solid grey;
+    border: 1px solid black;
+    background-color: white;
 }
 
 .tractor-brand {
@@ -60,10 +78,9 @@ div.photos img {
 }
 
 .ribbon { 
-    border-top: 1px solid black;
     border-bottom: 1px solid black;
     text-align: center;
-    padding: .75em 0;
+    padding: .75em .25em;
     background-color: grey;
     
 }
@@ -106,18 +123,22 @@ img.event-image {
 
 .summer-head .upcoming {
     position: relative;
-    bottom: 5px;
     left: 5px;
+}
+
+.flyer-button {
+    margin: .5em 0;
 }
 
 /** Toy Show **/
 .toy-show-head {
     text-align: center;
+    margin-top: 1em;
 }
 
 
 .toy-show-head img {
-    margin: 3em auto 0 auto;
+    margin: .5em auto 0 auto;
     border: 1px solid black;
     height: 225px;
 }
@@ -169,6 +190,18 @@ iframe {
     margin: 0 auto;
 }
 
+.club-info button {
+    margin: .5em 0;
+}
+
+.directors table td,
+.advisors table td {
+    padding: 5px;
+}
+
+.info h1 {
+    margin: .35em 0;
+}
 
 @media screen and (max-width: 1024px) {
     .image-row-1 img {
@@ -180,8 +213,11 @@ iframe {
     }
 }
 
-@media screen and (max-width: 900px) {
-    
+@media screen and (max-width: 993px) {
+    .summer-head .info1 img {
+        margin: .5em auto;
+
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -194,7 +230,13 @@ iframe {
         width: 100%;
     }
     
-
+    .jumbotron {
+        height: 20em;
+    }
+    
+    .jumbotron img {
+        margin: .5em auto 0 auto;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -202,8 +244,17 @@ iframe {
         font-size: 28px;
     }
     
-        .ribbon h3 {
-        font-size: 1.35em;
+    .ribbon h3 {
+        font-size: 1.25em;
+    }
+    
+    .jumbotron {
+        height: 17.5em;
+    }
+    
+    .jumbotron img {
+        height: 150px;   
+        margin: 2em auto 0 auto;
     }
 }
 
@@ -216,6 +267,46 @@ iframe {
     .philosophy p {
         font-size: .95em;
     }
+    
+    .summer-head h4:first-of-type,
+    .summer-head .upcoming {
+        display: block;
+    }
+    
+    .summer-head .upcoming {
+        width: 200px;
+        margin: 1em auto 0 auto;
+    }
+    
+    .summer-head .info1 img {
+        width: 100%;
+        height: auto;
+
+    }
+    
+    div.photos img {
+        display: block;
+        height: 200px;
+        margin: 0 auto .5em auto;
+    }
+    
+    .directors table td {
+        font-size: 14px;    
+    }
+    
+    .advisors table td {
+        font-size: 12px;
+    }
+    
+    .jumbotron {
+        height: 15em;
+    }
+    
+        .jumbotron img {
+        height: 150px;   
+        margin: .75em auto 0 auto;
+    }
+
 }
 
 @media screen and (max-width: 320px) {

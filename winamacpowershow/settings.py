@@ -36,8 +36,10 @@ INSTALLED_APPS = [
     'winamacpowershow',
     'info',
     'photos',
+    'dashboard',
     'ckeditor',
     'storages',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -143,3 +145,5 @@ AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_SE_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
 AWS_QUERYSTRING_AUTH = False
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'

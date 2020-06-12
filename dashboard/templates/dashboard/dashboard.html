@@ -1,0 +1,47 @@
+{% extends 'winamacpowershow/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+Dashboard | {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<div class="dashboard-content">
+    
+    
+    <div class="informational">
+        <h2>Informational Content</h2>
+        <ul>
+            {% for x in info %}
+            <li>
+                <a href="{% url 'edit-page' x.id %}">{{ x.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+    <div class="update">
+        <h2>Updates</h2> 
+        <a class="btn btn-sm btn-success" href="{% url 'create-update-page' %}">Create</a>
+        
+        <ul>
+            {% for x in update %}
+            <li>
+                <div class="align-link">
+                    <a href="{% url 'edit-update-page' x.id %}">{{ x.name }}</a>
+                    -
+                    <a class="delete" href="{% url 'delete-update' x.id %}">Delete</a>
+                </div>                
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    
+</div>
+
+{% endblock content %}
+

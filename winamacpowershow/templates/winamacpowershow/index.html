@@ -16,6 +16,21 @@
 {% endblock jumbotron %}
 
 {% block content %}
+
+    {% if update %}
+    <div class="update">
+        {% for x in update %}
+        <div class="section">
+            <h3>{{ x.name }}</h3>
+            <h4>{{ x.created_at }}</h4>
+            {{ x.content | safe }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+   
     <div class="tractor-brand">
             <h2>Featuring Minneapolis Moline</h2>
             <img src="{% static 'winamacpowershow/moline.jpg' %}">

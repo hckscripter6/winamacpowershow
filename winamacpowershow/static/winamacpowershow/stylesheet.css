@@ -203,6 +203,37 @@ iframe {
     margin: .35em 0;
 }
 
+.edit-info .django-ckeditor-widget {
+    width: 100%;
+}
+
+.update h2,
+.update a {
+    display: inline;
+}
+
+.update a.delete {
+    background-color: red;
+    padding: 0 .25em;
+    border-radius: .25em;
+    color: white;
+}
+
+.update a.btn {
+    position: relative;
+    bottom: .25em;
+    left: 1em;
+}
+
+.update .align-link {
+    display: inline;
+}
+
+.update ul {
+    margin-top: 1em;
+}
+
+
 @media screen and (max-width: 1024px) {
     .image-row-1 img {
         margin-bottom: 1em;   

@@ -1,19 +1,50 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from .forms import EditInfoForm
-from info.models import Info
+from .forms import InfoForm, UpdateForm
+from info.models import Info, Update
 
 # Create your views here.
-def editPage(request, id):
+def dashboard(request):
+    info = Info.objects.all()
+    update = Update.objects.order_by('-id').all()
+    return render(request, 'dashboard/dashboard.html', {'info': info, 'update': update})
+    
+    
+def editInfo(request, id):
     page = Info.objects.get(id=id)
     if request.method == 'POST':
-        form = EditInfoForm(request.POST, instance=page)
-        
+        form = InfoForm(request.POST, instance=page)
+        if form.is_valid():
+            form.save() 
+    else:
+        form = InfoForm(instance=page)
+    return render(request, 'dashboard/info-edit.html', { 'form': form })
+
+
+
+def createUpdate(request):
+    if request.method == 'POST':
+        form = UpdateForm(request.POST)
         if form.is_valid():
             form.save()
-            
     else:
-        form = EditInfoForm(instance=page)
+        form = UpdateForm()
+    return render(request, 'dashboard/info-edit.html', {'form': form})
+
+def deleteUpdate(request, id):
+    update = Update.objects.get(id=id).delete()
+    
         
-    return render(request, 'dashboard/info-edit.html', { 'form': form })
+        
+def editUpdate(request, id):
+    update = Update.objects.get(id=id)
+    if request.method == 'POST':
+        form = UpdateForm(request.POST, instance=update)
+        if form.is_valid():
+            form.save()  
+    else:
+        form = UpdateForm(instance=update)
+    return render(request, 'dashboard/info-edit.html', {'form': form})
+
+
         

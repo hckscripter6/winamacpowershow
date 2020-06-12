@@ -15,3 +15,5 @@ urlpatterns = [
     path('contact/', views.Contact, name="contact"),
     path('club-members/', views.ClubInfo, name="club-info"),
 ]
+
+

@@ -147,3 +147,6 @@ AWS_DEFAULT_ACL = None
 AWS_QUERYSTRING_AUTH = False
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'dashboard'

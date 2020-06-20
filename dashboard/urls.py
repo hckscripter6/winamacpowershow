@@ -6,6 +6,7 @@ urlpatterns = [
     path('update/edit/<int:id>/', views.editUpdate, name="edit-update-page"),
     path('update/create/', views.createUpdate, name="create-update-page"),
     path('update/<int:id>/delete/', views.deleteUpdate, name="delete-update"),
+    path('photos/', views.photoUpload, name="upload-photos"),
     path('', views.dashboard, name="dashboard"),
 ]
 

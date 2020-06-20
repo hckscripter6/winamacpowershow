@@ -26,7 +26,7 @@ p {
     font-size: 18px;
 }
 
-h1 {
+h1, h2 {
     font-family: 'Fjalla One', sans-serif;
 }
 
@@ -57,9 +57,12 @@ h1 {
     margin: .5em 0;
 }
 
-.tractor-brand,
-.philosophy {
+.update-container h2,
+.tractor-brand h2,
+.philosophy h2,
+.scholarships h2 {
     text-align: center;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .tractor-brand img {
@@ -73,20 +76,38 @@ h1 {
 div.photos img {
     height: 175px; 
     width: auto;
-    margin-bottom: .25em;
+    margin: .175em;
     border: 1px solid black;
+}
+
+div.image-set {
+    margin-bottom: 1em;
 }
 
 .ribbon { 
     border-bottom: 1px solid black;
     text-align: center;
     padding: .75em .25em;
-    background-color: grey;
+    background-color: #343a40;
     
 }
 
 .ribbon a {
     color: black;
+}
+
+.update {
+    max-height: 17em;
+    overflow: auto;
+    border: 1px solid grey;
+    margin-top: 1em;
+    padding: 1em 1em 0 1em;
+}
+
+.update p,
+.update li,
+.update ul {
+    font-size: 16px;
 }
 
 /** Summer Show **/
@@ -126,6 +147,11 @@ img.event-image {
     left: 5px;
 }
 
+table.daily-events td {
+    padding: .25em;
+    font-size: 14px;
+}
+
 .flyer-button {
     margin: .5em 0;
 }
@@ -136,6 +162,10 @@ img.event-image {
     margin-top: 1em;
 }
 
+.toy-show-image {
+    margin-bottom: 1em;
+}
+
 
 .toy-show-head img {
     margin: .5em auto 0 auto;
@@ -144,8 +174,7 @@ img.event-image {
 }
 
 .image-row-1 {
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid grey
     padding: 2em 0;
 }
 
@@ -180,6 +209,16 @@ iframe {
     display: block;
 }
 
+.update-container {
+    margin-top: 1em;
+}
+
+
+.contact-info h2,
+.club-info h2 {
+    text-align: center;
+}
+
 .contact-info,
 .club-info {
     text-align: center;
@@ -207,31 +246,33 @@ iframe {
     width: 100%;
 }
 
-.update h2,
-.update a {
+.update-edit h2,
+.update-edit a {
     display: inline;
 }
 
-.update a.delete {
+.update-edit a.delete {
     background-color: red;
     padding: 0 .25em;
     border-radius: .25em;
     color: white;
 }
 
-.update a.btn {
+.update-edit a.btn {
     position: relative;
     bottom: .25em;
     left: 1em;
 }
 
-.update .align-link {
+.update-edit .align-link {
     display: inline;
 }
 
-.update ul {
+.update-edit ul {
     margin-top: 1em;
 }
+
+.update
 
 
 @media screen and (max-width: 1024px) {
@@ -268,6 +309,11 @@ iframe {
     .jumbotron img {
         margin: .5em auto 0 auto;
     }
+    
+    p {
+        font-size: 16px;
+    }
+
 }
 
 @media screen and (max-width: 600px) {

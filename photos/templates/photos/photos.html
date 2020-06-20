@@ -10,11 +10,14 @@ Photos | {{ block.super }}
     <h5 class="center">Click on photo to enlarge</h5>
     <div class="image-display">
         {% for display in set %}
-            <h2>{{ display.name }}</h2>
-            {% for im in display.image_set.all %}
-                    <img src="{{ im.photo.url }}">
-                
-            {% endfor %}
+            <div class="image-set">
+                <h2>{{ display.name }}</h2>
+                {% for im in display.image_set.all %}
+                        <img src="{{ im.photo.url }}">
+
+                {% endfor %}
+            </div>
+
         {% endfor %}
     </div>
 </div>

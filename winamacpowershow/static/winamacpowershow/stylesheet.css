@@ -9,6 +9,11 @@ nav {
     
 }
 
+nav .navbar-toggler {
+    background-color: #536878;
+    border-radius: 0;
+}
+
 nav a {
     color: black !important;
 }

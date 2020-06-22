@@ -4,7 +4,13 @@ body {
 
 nav {
     padding: 0 15px !important;
+    background-color: #487552 !important;
+    border-bottom: 1px solid black;
     
+}
+
+nav a {
+    color: black !important;
 }
 
 nav img {
@@ -93,7 +99,7 @@ div.image-set {
     border-bottom: 1px solid black;
     text-align: center;
     padding: .75em .25em;
-    background-color: #343a40;
+    background-color: #487552;
     
 }
 
@@ -113,6 +119,14 @@ div.image-set {
 .update li,
 .update ul {
     font-size: 16px;
+}
+
+.scroll-notice {
+    text-align: center;
+    font-size: 25px;
+    padding: .1em;
+    border: 1px solid grey;
+    border-top: none;
 }
 
 /** Summer Show **/

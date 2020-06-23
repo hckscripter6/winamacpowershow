@@ -29,6 +29,16 @@ nav ul.navbar-nav li {
     padding-left: 1em;
 }
 
+nav .navbar-nav li {
+    border-bottom: 1px solid grey;
+}
+
+nav .show {
+    background-color: darkslategrey !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 .btn a {
     color: white;
 }
@@ -169,6 +179,11 @@ img.event-image {
 .summer-head .upcoming {
     position: relative;
     left: 5px;
+}
+
+.separate-days h2,
+.separate-days h4 {
+    margin-left: 20px;
 }
 
 table.daily-events td {
@@ -312,8 +327,13 @@ iframe {
 @media screen and (max-width: 993px) {
     .summer-head .info1 img {
         margin: .5em auto;
-
     }
+    
+    nav ul.navbar-nav li {
+        padding-left: 0;
+    }
+    
+
 }
 
 @media screen and (max-width: 768px) {

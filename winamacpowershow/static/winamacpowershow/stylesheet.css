@@ -4,7 +4,7 @@ body {
 
 nav {
     padding: 0 15px !important;
-    background-color: #36454f !important;
+    background-color: darkslategrey !important;
     border-bottom: 1px solid black;
     
 }
@@ -104,7 +104,7 @@ div.image-set {
     border-bottom: 1px solid black;
     text-align: center;
     padding: .75em .25em;
-    background-color: #36454f;
+    background-color: darkslategrey;
     
 }
 

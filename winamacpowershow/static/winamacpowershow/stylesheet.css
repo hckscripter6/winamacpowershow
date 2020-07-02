@@ -29,16 +29,6 @@ nav ul.navbar-nav li {
     padding-left: 1em;
 }
 
-nav .navbar-nav li {
-    border-bottom: 1px solid grey;
-}
-
-nav .show {
-    background-color: darkslategrey !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 .btn a {
     color: white;
 }
@@ -311,7 +301,22 @@ iframe {
     margin-top: 1em;
 }
 
-.update
+.golf-cart {
+    margin-top: 1em;
+}
+
+.golf-cart h3 {
+    margin-top: .5em;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: #4d75c9;
+}
+
+.modal-footer button {
+    border: 1px solid black;
+}
 
 
 @media screen and (max-width: 1024px) {
@@ -333,6 +338,15 @@ iframe {
         padding-left: 0;
     }
     
+    nav .navbar-nav li {
+        border-bottom: 1px solid grey;
+    }
+    
+    nav .show {
+        background-color: darkslategrey !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
 
 }
 

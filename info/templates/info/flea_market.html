@@ -5,10 +5,44 @@ Flea Market | {{ block.super }}
 {% endblock title %}
 
 {% block content %}
+
+
 <div class="info">
 	 <h1>{{ info.name }}</h1>
 	 <div class="body">
 		{{ info.content | safe }}
 	 </div>
 </div>
+
+<!-- Modal -->
+<div id="contract" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <h2>IMPORTANT!</h2>
+        <h5><strong>You MUST contact the director in charge before sending in a contract.</strong></h5>
+
+        <p>There are many advance reservations and those who send in a contract without prior approval are NOT guaranteed a spot.  We look forward to returning vendors and also new ones'  Please call Rachelle Ortman at (574)946-3206</p>
+
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success view-button"><a href="https://winamac.s3.us-east-2.amazonaws.com/Tractor+Show/NIPFTP+Summer+Show+Flea+Market+Contract+with+%24.pdf">I understand and wish to view the contract</a></button>
+        <button type="button" class="btn btn-default btn-primary close-button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+    $('.contract').html('<button type="button" class="btn btn-success btn-md" data-toggle="modal" data-target="#contract">View Contract</button>').css('margin-bottom', '.5em');
+
+});  
+</script>
+
+
 {% endblock content %}

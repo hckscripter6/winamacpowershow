@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
 
-ALLOWED_HOSTS = ['localhost', 'winamacpowershow.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', 'winamacpowershow.herokuapp.com', 'www.winamacpowershow.com']
 
 
 # Application definition
@@ -122,7 +122,7 @@ USE_TZ = True
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-        'height': 400,
+        'height': 400,hj
         'width': '100%',
     },
 }

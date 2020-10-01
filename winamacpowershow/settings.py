@@ -122,7 +122,7 @@ USE_TZ = True
 CKEDITOR_CONFIGS = {
     'default': {
         'toolbar': 'full',
-        'height': 400,hj
+        'height': 400,
         'width': '100%',
     },
 }
